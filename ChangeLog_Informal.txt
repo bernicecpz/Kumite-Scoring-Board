@@ -1,0 +1,107 @@
+============================================================== PROGRESS/ CHANGE ====================================================================
+
+Date: 28 December 2017
+	Revisited Yaphi's code for start and stop timer, tested and customized codes to requirement. Timer is working as expected. More test cases need to be added to safeguard from NaN or any potential errors not within control, e.g. browser compatibility
+	
+	Additional features/Shortcut:
+	1) Shortcut features
+		- ESC: Reset all values 
+	2) Help Icon
+		- For convenience of checking which keys to press 
+		- Hover over
+	3) Guided Tour 
+		- Need to learn how to integrate IntroJs into the HTML/CSS and Javascript
+	
+	Checking off from features stated on 17 December 2017:
+	Timer
+	1) Included original feature by setting the minutes up to 4 minutes [DONE]
+	2) Timer function allows the additional of 30 seconds option [DONE, Press Key "S"]
+		- Though pressing the 30 seconds options would also allow the adding of the time. [ACCEPTED, but must state in instruction/guide]
+	3) Can count down fully and will not continue decrease into the negative numbers [DONE]
+		- BUT cannot be pause nor resumed [RESOLVED]
+		
+	Functions to include
+	Timer [RESOLVED]
+	1) Ability to pause the timer 
+		- To store the remaining timing
+	2) Ability to continue the timer when the timer has been paused
+	
+	
+Date: 22 December 2017
+	Timer can switch between boolean values accurately, but not returning the correct time frequently
+	The timing when starting has high frequency of skipping a few seconds
+	The timer can be paused correctly and accurately once. However, subsequently it cannot be paused.
+	
+	Should consider writing my own. As of now everything seems to be correct. However,I am not sure how to make it work (Especially for the start and pause)
+	
+
+Date: 17 December 2017
+
+	Features:
+	Timer
+	1) Included original feature by setting the minutes up to 4 minutes
+	2) Timer function allows the additional of 30 seconds option
+		- Though pressing the 30 seconds options would also allow the adding of the time.
+	3) Can count down fully and will not continue decrease into the negative numbers
+		- BUT cannot be pause nor resumed
+		
+	Functions to include
+	Timer
+	1) Ability to pause the timer
+		- To store the remaining timing
+	2) Ability to continue the timer when the timer has been paused
+
+Date: 15 December ~ 16 December 2017
+	Modifications made:
+	IE display for blueRedDiv has been corrected to work for IE11+ onwards
+
+	Areas to Note:
+	1) The display of the expected size and viewing will only work when "Duplicate" is selected under the Project Settings
+	2) Microsoft Edge/IE will need to be zoomed in to 150% to be viewed in the expected resolution/size
+	
+	Features priority:
+	1) Timer Function
+		- Increase the font of the numbers for the timer
+		- Includes a popup menu that allows customized input of time
+		- Can use W3C source codes, but will have to modify the comparison values to simulate the countdown
+
+		
+	2) Shortcut features
+	3) Guided Tour 
+		- Need to learn how to integrate IntroJs into the HTML/CSS and Javascript
+	
+Date: 13 December ~ 14 December 2017
+	Javascript is written for AO and AKA foul buttons
+	Points initialization for AO and AKA, i.e. point 0 is being displayed via JS
+	Points manipulation for AO and AKA is tested and working for required functions - add and minus
+
+	Remaining feature to develop:
+	1) Timer Function - Setting of minutes and seconds, the buttons to start/stop the timer
+		- Increase the font of the numbers for the timer
+		- Includes a popup menu that allows customized input of time
+	2) Esc Function - Reset all the values
+	3) Guided Tour/ Help Page? - A quick guide on usage (Hover-over)/ Redirect to guide page (Open new window) 
+
+	Areas to note: 
+	1) IE displayed the blueRedDiv horizontally instead of the expected display, i.e. vertically (May choose to provide warning NOT to use Internet Explorer)
+	2) Microsoft Edge/IE will need to be zoomed in to 150% to be viewed in the expected resolution/size
+	3) Visuals of checkbox across the browsers (Chrome, Firefox, Microsoft Edge/IE) are different (Not within control)
+
+
+Date: 12 December 2017
+	Scrap progress for HTML and CSS, should develop in px instead of percentage.
+	Considering that the interface is displayed via Duplicate screen, it will be fine if able to display as expected [ACCEPTED]
+	Resumed plan to proceed to write logic for animation with Javascript 
+
+Date: 9 December 2017
+	- Drafted the complete layout of the Kumite Scoring Board
+	- SENSHU option is included
+	- Check against W3C HTML and CSS validators 
+
+	Next milestone
+	Logic: Javascript will be included from this date onwards
+
+	
+Project Started: 4 December 2017
+
+	Technology Used: HTML/CSS and Javascript

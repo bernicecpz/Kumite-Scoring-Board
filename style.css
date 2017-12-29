@@ -1,0 +1,129 @@
+
+body{
+  align-self: center;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+label{
+  font-size: 30px;
+}
+
+input[type="checkbox"]{
+  -ms-transform: scale(2); /* IE */
+  -moz-transform: scale(2); /* FF */
+  -webkit-transform: scale(2); /* Safari and Chrome */
+  -o-transform: scale(2); /* Opera */
+  width: 5%; /*Desired width*/
+  height: auto; /*Desired height*/
+}
+
+
+#helpIcon{
+  font-size: 15px;
+  padding: 5px;
+}
+
+/*Generated from CSS3 Gradient Generator; Note not all browsers support CSS3 Gradient
+Modified slightly to resolve and pass W3C CSS Validations
+*/
+
+#blueRedDiv{
+ width:100vw;
+ height:100vh;
+ background-color:#052afc;
+
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0300ea', endColorstr='#ff0000',GradientType=1 ); /* IE6-9 */
+ background:-moz-linear-gradient(left, #052afc 50%, #ff0000 50%); /* Firefox 3.6+ */
+ background:-webkit-linear-gradient(left, #052afc 50%, #ff0000 50%); /* W3C */
+ background:-ms-linear-gradient(left, #052afc 50%, #ff0000 50%);/* Chrome10+,Safari5.1+ */
+ background:linear-gradient(#052afc 50%, #ff0000 50%); /* Opera 11.10+ */
+ background:linear-gradient(to right, #052afc 50%, #ff0000 50%); /* Only IE11+; seems to work different from the rest, "to" seems to invert the positioning.*/
+ background:-webkit-gradient(linear, left bottom, right bottom, color-stop(50%,#052afc), color-stop(50%,#ff0000)); /* Safari 4+,Chrome 2+ */
+ display: flex;
+ position: relative;
+ text-align:center;
+ background-size: cover; /*This is key to ensure that the background scale to zoom.*/
+ font-size: 100%;
+}
+
+/*For top portion of score board*/
+#left-AO{
+  float:left;
+  width:50%;
+  font-size:50px;
+  color:white;
+}
+
+#center-timer{
+  background-color: white;
+  width:  30%;
+  height: 20%;
+  margin: 1%;
+  font-size: 115px;
+  border-style: solid;
+  border-color: black;
+  vertical-align: text-top;
+}
+
+#right-AKA{
+  float:right;
+  width:50%;
+  font-size:50px;
+  color:white;
+}
+
+/*For middle portion of score board*/
+#AO_PointZone, #AKA_PointZone{
+  align-content: center;
+  margin-top: 10%; /*Percent will be shifted here to adjust the spacing*/
+  font-size:200px;
+}
+
+#buttonDiv{
+  width: auto;
+  height: 115px;
+  align-items: center;
+}
+
+#AO-minus,#AKA-minus{
+  align-content: center;
+  margin: 15%;
+  font-size:15px;
+  position:relative;
+  margin-top: 22%;
+}
+
+/*For the bottom portion of score board*/
+#foulsLabelBox{
+  background-color: lightgrey;
+  align-self: baseline;
+  font-size: 45px;
+  display: inline-block;
+  text-align: center;
+  margin-top:45%;
+  width: 100%;
+  height: auto;
+  padding: 5px;
+}
+
+#cat1FoulsAO,#cat2FoulsAO,#cat1FoulsAKA,#cat2FoulsAKA{
+  align-self: center;
+  margin: 2%;
+  padding-bottom:5%;
+}
+
+
+/*Foul Buttons*/
+#Cat1_AO_C, #Cat1_AO_K, #Cat1_AO_HC, #Cat2_AO_C, #Cat2_AO_K, #Cat2_AO_HC, #Cat1_AKA_C, #Cat1_AKA_K, #Cat1_AKA_HC, #Cat2_AKA_C, #Cat2_AKA_K, #Cat2_AKA_HC{
+  display: inline-block;
+  background-color:#f5f5f0;
+  border-style: solid;
+  border-color: black;
+  border-width: thin;
+  font-size: 50px;
+  text-align: center;
+  width: 20%;
+  height: auto;
+}
