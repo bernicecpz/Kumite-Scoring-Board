@@ -19,8 +19,8 @@ All suggestions are welcome (if any).
   - Including a simple annotation, i.e. checkbox would aid the score tracker to note down who is awarded the advantage throughout the matches
 
 
-Copyright (c) 2017 by Bernice Choy Pei Zhen
-Fork of original work by Justin (Interface design & its functions for initial scoreboard)
+Copyright (c) 2017 by Bernice Choy Pei Zhen  
+Fork of original work by Justin (Interface design & its functions for initial scoreboard)  
 Fork of an original work by Yaphi (https://codepen.io/yaphi1/pen/QbzrQP)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
