@@ -10,7 +10,7 @@ All suggestions are welcome (if any).
 - HTML/CSS
 - Javascript
 
-## Objectives for recreating the application:
+## Reasons for recreating the application:
 1. Adobe Flash dependency and incompatibility for certain browsers, e.g. Chrome on older versions
 2. Timer is limited to minutes control. Current rules requires the control of seconds (30 seconds), especially for junior matches
 3. Background coverage is highly dependent on the resolution of the laptops used
