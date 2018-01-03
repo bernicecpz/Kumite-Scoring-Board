@@ -1,5 +1,6 @@
-// 
-// Copyright (c) 2017 by Bernice Choy
+//
+// Copyright (c) 2017 by Bernice Choy Pei Zhen
+// Fork of original work by Justin (Interface design & its functions for initial scoreboard)
 // Fork of an original work by Yaphi for Countdown Timer (https://codepen.io/yaphi1/pen/QbzrQP)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
@@ -19,6 +20,7 @@
 var document;
 var event;
 var key;
+var button;
 
 //Point Management
 var AO_Points = 0;
@@ -27,10 +29,8 @@ var aoPointZone;
 var akaPointZone;
 
 //Time Management
-var timeString = "00:00";
 var timeDisplay;
-var clockRunning = false;
-
+var timeString = "00:00";
 var t = 0;
 var timeInMinutes = 0;
 var currentTime = 0;
@@ -62,8 +62,12 @@ function initializePointZonesAndTimer() {
 }
 
 function setTimerButton(event) {
+    //Retrieve the button pressed, i.e. the keyCode to determine the action to take
     key = document.getElementById("timerDisplay");
     key = event.keyCode;
+
+    //Check if there is an existing clock currently running
+    //This is to safeguard against any accidental setting of the timer during the ongoing matches
     if(!clockRunning){
         switch(key){
           case 49:
@@ -102,6 +106,7 @@ function setTimerButton(event) {
         minutesTD = Math.floor((timeInMinutes % (1000 * 60 * 60)) / (1000 * 60));
         secondsTD = Math.floor((timeInMinutes % (1000 * 60)) / 1000);
 
+        //If the seconds option is pressed, i.e. key "S", the formatting of the display will be formatted accordingly
         if(key == 83){
           //The if-else condition is to standardize the display of the timer in terms of leading zeros
           if(secondsTD > 10){
@@ -109,12 +114,13 @@ function setTimerButton(event) {
           }else{
             timeDisplay.innerHTML = "0"+minutesTD + ":0" + secondsTD;
           }
-
         }else{
           timeDisplay.innerHTML = timeString;
         }
     }
 }
+
+//Timer functions: Avoid editing these functions as they are forked from another source and has been modified to meet the requirements of the app
 
 function time_remaining(endtime){
 	var t = Date.parse(endtime) - Date.parse(new Date());
@@ -164,32 +170,84 @@ function resume_clock(){
 	}
 }
 
-// handle pause and resume button clicks
-window.onload = function(){
-  document.getElementById('timerDisplay').onclick = function(){
-
-    if(clockRunning){
-      console.log("There is an existing clock. Check status");
-      if(!paused){
-          pause_clock();
-          console.log("Pause toggle");
-        }else{
-          resume_clock();
-          console.log("Resume toggle");
-        }
-    }else{
-      //If the time is more than 0. To guard against the NaN scenario
-      if(timeInMinutes > 0){
-        run_clock();
-        clockRunning = true;
-        console.log("No clock running initially. A new clock is running now.");
-      }
-    }
-
+function pauseOrResumeClock(paused){
+  if(!paused){
+      pause_clock();
+  }else{
+      resume_clock();
   }
 }
 
+window.onload = function(event){
 
+    //For mouseclicks - handle start, pause & resume clock button clicks
+    document.getElementById('timerDisplay').onclick = function(){
+      if(clockRunning){
+        pauseOrResumeClock(paused);
+      }else{
+        //If the time is more than 0. To guard against the NaN scenario
+        if(timeInMinutes > 0){
+          run_clock();
+          clockRunning = true;
+        }
+      }
+    }
+
+}
+
+//To be reviewed
+function keyCodeShortcut(event){
+    //For keyCodes
+    key = event.keyCode;
+    switch(key){
+      case 13: //Handle start, pause & resume clock using "Enter" key
+      if(clockRunning){
+        pauseOrResumeClock(paused)
+      }else{
+        //If the time is more than 0. To guard against the NaN scenario
+        if(timeInMinutes > 0){
+          run_clock();
+          clockRunning = true;
+        }
+      }
+        break;
+      case 27:
+        if(!clockRunning){ //safeguard against clearing the values during ongoing matches
+          //Timer
+          timeString = "00:00";
+          t = 0;
+          timeInMinutes = 0;
+          currentTime = 0;
+          deadline = 0;
+          clockRunning = false;
+          minutes = 0;
+          seconds = 0;
+          minutesTD = 0;
+          secondsTD = 0;
+
+
+          //Fouls
+          var element = document.querySelectorAll('[id^="Cat"]');
+          for (var i = 0; i < element.length; ++i) {
+            element[i].style.backgroundColor = "white";
+          }
+
+          //SENSHU
+          element = document.querySelectorAll('[id^="senshu"]');
+          for (var i = 0; i < element.length; ++i) {
+            element[i].checked = false;
+          }
+
+
+          //Points
+          AO_Points = 0;
+          AKA_Points = 0;
+          aoPointZone.innerHTML = AO_Points;
+          akaPointZone.innerHTML = AKA_Points;
+        }
+        break;
+    }
+}
 
 //AO
   //Point Manipulation for AO
@@ -206,8 +264,9 @@ window.onload = function(){
   }
 
   //CAT1 Foul Buttons
+
   function cat1_AO_C() {
-    var button = document.getElementById("Cat1_AO_C");
+     button = document.getElementById("Cat1_AO_C");
       if(button.style.backgroundColor == "yellow") {
         button.style.backgroundColor = "white";
       }else{
@@ -216,7 +275,7 @@ window.onload = function(){
   }
 
   function cat1_AO_K() {
-    var button = document.getElementById("Cat1_AO_K");
+    button = document.getElementById("Cat1_AO_K");
       if(button.style.backgroundColor == "yellow") {
         button.style.backgroundColor = "white";
       }else{
@@ -226,7 +285,7 @@ window.onload = function(){
 
 
   function cat1_AO_HC() {
-    var button = document.getElementById("Cat1_AO_HC");
+    button = document.getElementById("Cat1_AO_HC");
       if(button.style.backgroundColor == "yellow") {
         button.style.backgroundColor = "white";
       }else{
@@ -237,7 +296,7 @@ window.onload = function(){
   //CAT2 Foul buttons
 
   function cat2_AO_C() {
-    var button = document.getElementById("Cat2_AO_C");
+    button = document.getElementById("Cat2_AO_C");
       if(button.style.backgroundColor == "yellow") {
         button.style.backgroundColor = "white";
       }else{
@@ -246,7 +305,7 @@ window.onload = function(){
   }
 
   function cat2_AO_K() {
-    var button = document.getElementById("Cat2_AO_K");
+    button = document.getElementById("Cat2_AO_K");
       if(button.style.backgroundColor == "yellow") {
         button.style.backgroundColor = "white";
       }else{
@@ -256,7 +315,7 @@ window.onload = function(){
 
 
   function cat2_AO_HC() {
-    var button = document.getElementById("Cat2_AO_HC");
+    button = document.getElementById("Cat2_AO_HC");
       if(button.style.backgroundColor == "yellow") {
         button.style.backgroundColor = "white";
       }else{
@@ -283,7 +342,7 @@ window.onload = function(){
 
   //CAT1 Foul Buttons
   function cat1_AKA_C() {
-    var button = document.getElementById("Cat1_AKA_C");
+    button = document.getElementById("Cat1_AKA_C");
       if(button.style.backgroundColor == "yellow") {
         button.style.backgroundColor = "white";
       }else{
@@ -292,7 +351,7 @@ window.onload = function(){
   }
 
   function cat1_AKA_K() {
-    var button = document.getElementById("Cat1_AKA_K");
+    button = document.getElementById("Cat1_AKA_K");
       if(button.style.backgroundColor == "yellow") {
         button.style.backgroundColor = "white";
       }else{
@@ -302,7 +361,7 @@ window.onload = function(){
 
 
   function cat1_AKA_HC() {
-    var button = document.getElementById("Cat1_AKA_HC");
+    button = document.getElementById("Cat1_AKA_HC");
       if(button.style.backgroundColor == "yellow") {
         button.style.backgroundColor = "white";
       }else{
@@ -313,7 +372,7 @@ window.onload = function(){
   //CAT2 Foul buttons
 
   function cat2_AKA_C() {
-    var button = document.getElementById("Cat2_AKA_C");
+    button = document.getElementById("Cat2_AKA_C");
       if(button.style.backgroundColor == "yellow") {
         button.style.backgroundColor = "white";
       }else{
@@ -322,7 +381,7 @@ window.onload = function(){
   }
 
   function cat2_AKA_K() {
-    var button = document.getElementById("Cat2_AKA_K");
+    button = document.getElementById("Cat2_AKA_K");
       if(button.style.backgroundColor == "yellow") {
         button.style.backgroundColor = "white";
       }else{
@@ -332,7 +391,7 @@ window.onload = function(){
 
 
   function cat2_AKA_HC() {
-    var button = document.getElementById("Cat2_AKA_HC");
+    button = document.getElementById("Cat2_AKA_HC");
       if(button.style.backgroundColor == "yellow") {
         button.style.backgroundColor = "white";
       }else{

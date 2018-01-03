@@ -4,15 +4,16 @@
   <meta charset="UTF-8">
   <title>Kumite Scoring Board</title>
   <link rel = "stylesheet" type = "text/css" href = "style.css"/> <!-- For layout -->
-  <link rel="stylesheet" type="text/css" href="introjs.css">
+  <link rel="stylesheet" type="text/css" href="introjs.css"> <!-- NOT IMPLEMENTED: Intended for the guided tour -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- For Icons -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script type="text/javascript" src="intro.js"></script>
-  <script  src="functions.js"></script>
+  <script  src="functions.js"></script> <!-- DO NOT REMOVE THIS LINE: Logics/ required animations for the web applications -->
 
   <!--
-  Copyright (c) 2017 by Bernice Choy
+  Copyright (c) 2017 by Bernice Choy Pei Zhen
+  Fork of original work by Justin (Interface design & its functions for initial scoreboard)
   Fork of an original work by Yaphi for Countdown Timer (https://codepen.io/yaphi1/pen/QbzrQP)
 
   Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
@@ -25,7 +26,7 @@
 
 </head>
 
-<body onpageshow="initializePointZonesAndTimer()"  onkeyup="setTimerButton(event)">
+<body onpageshow="initializePointZonesAndTimer()"  onkeyup="setTimerButton(event)" onkeydown="keyCodeShortcut(event)">
   <!-- blueRedDiv:
         Blue (AO) & Red (AKA) background that will provide the interface
   -->
@@ -40,9 +41,10 @@
         CHUKOKU, KEIKOKU, HANSHUKO-CHUI
       -->
 
+        <!-- Depending on the respective dojos preferences, they can choose to comment out the SENSHU options-->
         <div>
           <label>SENSHU </label>
-          <input type="checkbox" name="senshu" value="senshu">
+          <input type="checkbox" id="senshuAO">
         </div>
 
         <div id="cat1FoulsAO">
@@ -69,8 +71,8 @@
 
       <div id="buttonDiv">
         <!-- Buttons to minus the points of each side; JS to be written -->
-        <button id="AO-minus" onclick="aoPointZoneMinus()">---</button>
-        <button id="AKA-minus" onclick="akaPointZoneMinus()">---</button>
+        <button id="AO-minus" onclick="aoPointZoneMinus()" class="glyphicon glyphicon-minus"></button>
+        <button id="AKA-minus" onclick="akaPointZoneMinus()" class="glyphicon glyphicon-minus"></button>
       </div>
 
       <!-- Box for labels of fouls-->
@@ -89,7 +91,7 @@
 
           <div>
               <label>SENSHU </label>
-              <input type="checkbox" name="senshu" value="senshu">
+              <input type="checkbox" id="senshuAKA">
           </div>
 
           <div id="cat1FoulsAKA">
@@ -106,12 +108,11 @@
 
     </div>
 
+<!-- Would love to include a guided tour for the app, but may have to determine its feasibility in the long run -->
 
 <!--
     <i id="helpIcon" class="fa fa-question-circle-o"></i>
 -->
-
-
 
   </div>
 
