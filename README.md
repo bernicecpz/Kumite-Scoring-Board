@@ -1,6 +1,6 @@
 # Kumite-Scoring-Board
 A web application is used to keep track of scores for participant in sparring (kumite) matches during tournament for sports karate.
-**NOTE: While the objective is to be reconstructed for maximum compatibility to most commonly used browsers, it is intended for internal usage (club-organized tournaments) only.**
+**NOTE: This web application is intended for internal usage (club-organized tournaments) only.**
 
 **Please refer to the LICENSE file for the MIT License.**
 
@@ -9,6 +9,9 @@ All suggestions are welcome (if any).
 ## Technology used
 - HTML/CSS
 - Javascript
+
+## Objective
+- To be reconstructed for maximum compatibility to most commonly used browsers
 
 ## Reasons for recreating the application:
 1. Adobe Flash dependency and incompatibility for certain browsers, e.g. Chrome on older versions
