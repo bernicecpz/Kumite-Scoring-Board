@@ -1,8 +1,16 @@
 ============================================================== PROGRESS/ CHANGE ====================================================================
-Date: 4 January 2017
+Date: 7 January 2018
+	Currently pending to show TP committee about the application, before distribution.
+	Potential Feature(s):
+	a) Guided Tour: Integration of IntroJs into the HTML/CSS and Javascript
+	b) Help Icons: For quick viewing of shortcut keys to press by hovering over Buttons
+
+Date: 4 January 2018
 	Included shortcut keys (ESC and Enter)
 	1) Enter: Handle pause and resume of timer
 	2) Esc: Clear all values at the end of a match
+
+	Note: Fully included features available in the initial version
 
 Date: 28 December 2017
 	Revisited Yaphi's code for start and stop timer, tested and customized codes to requirement. Timer is working as expected. More test cases need to be added to safeguard from NaN or any potential errors not within control, e.g. browser compatibility
