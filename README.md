@@ -28,13 +28,12 @@ Please refer to the "Instructions & Documentation" Folder on how to use the Kumi
 
 ## Potential Features
 *NOTE: These features are implemented and delivered at best-effort basis.*
-
-	1) Guided Tour: Integration of IntroJs into the HTML/CSS and Javascript
+1. Guided Tour: Integration of IntroJs into the HTML/CSS and Javascript
     - First-time users of the Kumite-Score-Board to quickly learn how to navigate around the web application.
     - Current consideration(s): IntroJs
-	2) Help Icons: For quick viewing of shortcut keys to press by hovering over help icon
+2. Help Icons: For quick viewing of shortcut keys to press by hovering over help icon
     - Will need to ensure that the overall dimension of the scoreboard is not affected by the inclusion of the help icon.  
-  3) Automation of awarding SENSHU (Further research & requirement gathering required)
+3. Automation of awarding SENSHU (Further research & requirement gathering required)
     - Definition of SENSHU: "... understood that one contestant has achieved the** first instance of scoring** on the opponent **without having the opponent also score** before the signal."
     - Perhaps configuring the settings to award automatically by default
     - Give option to automate the process of awarding SENSHU
