@@ -1,9 +1,4 @@
 ============================================================== PROGRESS/ CHANGE ====================================================================
-Date: 7 January 2018
-	Currently pending to show TP committee about the application, before distribution.
-	Potential Feature(s):
-	a) Guided Tour: Integration of IntroJs into the HTML/CSS and Javascript
-	b) Help Icons: For quick viewing of shortcut keys to press by hovering over Buttons
 
 Date: 4 January 2018
 	Included shortcut keys (ESC and Enter)
