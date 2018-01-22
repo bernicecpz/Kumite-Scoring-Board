@@ -6,6 +6,9 @@ A web application is used to keep track of scores for participant in sparring (k
 
 All suggestions are welcome (if any).
 
+## Instructions
+Please refer to the "Instructions & Documentation" Folder on how to use the Kumite-Scoring-Board web application.  
+
 ## Technology used
 - HTML/CSS
 - Javascript
@@ -22,3 +25,16 @@ All suggestions are welcome (if any).
     - HTML and Javascript will be used for the reconstruction of the application, so as to make it easier to maintain and modify in the future
 5. Updates in the WKF Rules: there is a new rule of SENSHU for first point unopposed advantage.
     - Including a simple annotation, i.e. checkbox would aid the score tracker to note down who is awarded the advantage throughout the matches
+
+## Potential Features
+*NOTE: These features are implemented and delivered at best-effort basis.*
+
+	a) Guided Tour: Integration of IntroJs into the HTML/CSS and Javascript
+    - First-time users of the Kumite-Score-Board to quickly learn how to navigate around the web application.
+    - Current consideration(s): IntroJs
+	b) Help Icons: For quick viewing of shortcut keys to press by hovering over help icon
+    - Will need to ensure that the overall dimension of the scoreboard is not affected by the inclusion of the help icon.  
+  c) Automation of awarding SENSHU (Further research & requirement gathering required)
+    - Definition of SENSHU: "... understood that one contestant has achieved the** first instance of scoring** on the opponent **without having the opponent also score** before the signal."
+    - Perhaps configuring the settings to award automatically by default
+    - Give option to automate the process of awarding SENSHU
