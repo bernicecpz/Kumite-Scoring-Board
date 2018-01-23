@@ -27,13 +27,22 @@ Please refer to the "Instructions & Documentation" Folder on how to use the Kumi
     - Including a simple annotation, i.e. checkbox would aid the score tracker to note down who is awarded the advantage throughout the matches
 
 ## Potential Features
-*NOTE: These features are implemented and delivered at best-effort basis.*
+*NOTE: These features are implemented and delivered at best-effort basis, depending on time availability.*
 1. Guided Tour: Integration of IntroJs into the HTML/CSS and Javascript
     - First-time users of the Kumite-Score-Board to quickly learn how to navigate around the web application.
-    - Current consideration(s): IntroJs
-2. Help Icons: For quick viewing of shortcut keys to press by hovering over help icon
-    - Will need to ensure that the overall dimension of the scoreboard is not affected by the inclusion of the help icon.  
+    - Current consideration(s): IntroJs- however, there seems to be some security vulnerability. So may have to search for other alternative.
+2. Help Icons: For quick viewing of shortcut keys to press by hovering over/ clicking the help icon
+    - Will need to ensure that the overall dimension of the scoreboard is not affected by the inclusion of the help icon.
+    - The display would be a keyboard itself? Though this means
 3. Automation of awarding SENSHU (Further research & requirement gathering required)
     - Definition of SENSHU: "... understood that one contestant has achieved the** first instance of scoring** on the opponent **without having the opponent also score** before the signal."
-    - Perhaps configuring the settings to award automatically by default
-    - Give option to automate the process of awarding SENSHU
+    - For now, advised not to automate due to the extra steps required when intervention is required.
+      - Perhaps configuring the settings to award automatically by default
+      - Give option to automate the process of awarding SENSHU
+4. Absolute Winning (8 point difference)
+    - Set the timer to 00:00
+5. Flashing of Timer
+    - At 10 second mark, the timer will flash in order to notify the score tracker to
+6. Addition of more shortcut keys
+    - Can include for the corresponding Category 1 and Category 2 fouls positioning on the screen
+    - Current suggestions: Q,W,E,A,S,D (AO); I,O,P,J,K,L (AKA)
