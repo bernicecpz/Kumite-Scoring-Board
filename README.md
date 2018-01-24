@@ -2,7 +2,7 @@
 A web application is used to keep track of scores for participant in sparring (kumite) matches during tournament for sports karate.
 **NOTE: This web application is intended for internal usage (club-organized tournaments) only.**
 
-**Please refer to the LICENSE file for the MIT License.**
+**This project is licensed under the terms of the MIT license.**
 
 All suggestions are welcome (if any).
 
