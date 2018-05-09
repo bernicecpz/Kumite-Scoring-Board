@@ -28,21 +28,22 @@ Please refer to the "Instructions & Documentation" Folder on how to use the Kumi
 
 ## Potential Features
 *NOTE: These features are implemented and delivered at best-effort basis, depending on time availability.*
-1. Guided Tour: Integration of IntroJs into the HTML/CSS and Javascript
-    - First-time users of the Kumite-Score-Board to quickly learn how to navigate around the web application.
-    - Current consideration(s): IntroJs- however, there seems to be some security vulnerability. So may have to search for other alternative.
-2. Help Icons: For quick viewing of shortcut keys to press by hovering over/ clicking the help icon
+
+1. Help Icons: For quick viewing of shortcut keys to press by hovering over/ clicking the help icon
     - Will need to ensure that the overall dimension of the scoreboard is not affected by the inclusion of the help icon.
-    - The display would be a keyboard itself? Though this means
-3. Automation of awarding SENSHU (Further research & requirement gathering required)
+    - The display would be a keyboard itself. This will be more meaningful, considering that the shortcut keys are standardized
+2. Automation of awarding SENSHU (Further research & requirement gathering required)
     - Definition of SENSHU: "... understood that one contestant has achieved the** first instance of scoring** on the opponent **without having the opponent also score** before the signal."
-    - For now, advised not to automate due to the extra steps required when intervention is required.
+    - For now, advised against automating due to the extra steps if intervention is required.
       - Perhaps configuring the settings to award automatically by default
       - Give option to automate the process of awarding SENSHU
-4. Absolute Winning (8 point difference)
+      - Currently advised against automating it due to the steps required to revert any decisions would be more than if this step is managed manually.
+3. Absolute Winning (8 point difference)
     - Set the timer to 00:00
-5. Flashing of Timer
-    - At 10 second mark, the timer will flash in order to notify the score tracker to
-6. Addition of more shortcut keys
+    - Concerns: If the score-tracker give the wrong point either side, and the opponent given the points is one point away from a 8 point difference. The issue would be how do I rectify or revert this effect of resetting the timer?
+4. Flashing of Timer
+    - At 10 second mark, the timer will flash in order to notify the score tracker to ring the bell to signal the 10 second countdown.
+5. Addition of more shortcut keys
     - Can include for the corresponding Category 1 and Category 2 fouls positioning on the screen
-    - Current suggestions: Q,W,E,A,S,D (AO); I,O,P,J,K,L (AKA)
+    - Current suggestions: Q,W,E,A,S,D (AO); I,O,P,J,K,L (AKA). 
+6. Any bugs that will occur in the event of using it. These bugs should be reported to be resolved.

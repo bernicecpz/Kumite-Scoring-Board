@@ -1,21 +1,6 @@
-//
-// Copyright (c) 2017 by Bernice Choy Pei Zhen
-// Fork of original work by Justin (Interface design & its functions for initial scoreboard)
-// Fork of an original work by Yaphi for Countdown Timer (https://codepen.io/yaphi1/pen/QbzrQP)
-//
-// Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-//
-// The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-//
-
-
-//Logic to be written here
 "use strict"; //Strict mode: Not allowed to use undeclared variables
 
 //Global variables to be accessed by the functions
-
 //Generic keyword for javascript usage
 var document;
 var event;
@@ -91,7 +76,11 @@ function setTimerButton(event) {
               timeString = "00:30"
               timeInMinutes = halfMinute;
             }else{
-              timeInMinutes = timeInMinutes + halfMinute;
+              //Set a bound to the adding of time by 30 seconds; Format won't be modified              
+              if(timeInMinutes < (10*oneMinute) ){
+                //Check that the timing does not pass the 10 min mark then add 30 seconds
+                timeInMinutes = timeInMinutes + halfMinute;
+              }
             }
 
             break;
@@ -111,6 +100,13 @@ function setTimerButton(event) {
           //The if-else condition is to standardize the display of the timer in terms of leading zeros
           if(secondsTD > 10){
             timeDisplay.innerHTML = "0"+minutesTD + ":" + secondsTD;
+          }else if(minutesTD >= 10){
+            if(secondsTD < 10){
+              timeDisplay.innerHTML = minutesTD + ":0" + secondsTD;
+            }else{
+              timeDisplay.innerHTML = minutesTD + ":" + secondsTD;
+            }
+           
           }else{
             timeDisplay.innerHTML = "0"+minutesTD + ":0" + secondsTD;
           }
