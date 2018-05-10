@@ -1,10 +1,10 @@
 # Kumite-Scoring-Board
-A web application is used to keep track of scores for participant in sparring (kumite) matches during tournament for sports karate.
-**NOTE: This web application is intended for internal usage (club-organized tournaments) only.**
+A dashboard used to keep track of scores for participant for sparring (kumite) matches during tournament for sports karate.
+**NOTE: This standalone application is intended for internal usage (club-organized tournaments) only.**
 
-**Please refer to the LICENSE file for the MIT License.**
+**This project is licensed under the terms of the BSD 3-Clause License.**
 
-All suggestions are welcome (if any).
+All suggestions are welcome. If any bugs are found while using this application, please feel free to drop me a comment here or email @ bernicecpz@gmail.com
 
 ## Instructions
 Please refer to the "Instructions & Documentation" Folder on how to use the Kumite-Scoring-Board web application.  
@@ -22,9 +22,10 @@ Please refer to the "Instructions & Documentation" Folder on how to use the Kumi
 3. Background coverage is highly dependent on the resolution of the laptops used
     - Currently the zoom may change the font size of the elements, may need to take extra care while doing the CSS
 4. Difficult to manage and modify due to lack of documentation and software. Current technology used is flash content, which is restrictive in modification.
-    - HTML and Javascript will be used for the reconstruction of the application, so as to make it easier to maintain and modify in the future
+    - HTML and Javascript will be used for the reconstruction of the application,hopefully making it easier to maintain and modify in the future
 5. Updates in the WKF Rules: there is a new rule of SENSHU for first point unopposed advantage.
     - Including a simple annotation, i.e. checkbox would aid the score tracker to note down who is awarded the advantage throughout the matches
+
 
 ## Potential Features
 *NOTE: These features are implemented and delivered at best-effort basis, depending on time availability.*
@@ -40,10 +41,7 @@ Please refer to the "Instructions & Documentation" Folder on how to use the Kumi
       - Currently advised against automating it due to the steps required to revert any decisions would be more than if this step is managed manually.
 3. Absolute Winning (8 point difference)
     - Set the timer to 00:00
-    - Concerns: If the score-tracker give the wrong point either side, and the opponent given the points is one point away from a 8 point difference. The issue would be how do I rectify or revert this effect of resetting the timer?
+    - Concerns: If the score-tracker give the wrong point either side, and the opponent given the points is one point away from a 8 point difference. The issue would be how do I rectify or revert this effect of resetting the timer? 
+    - Similar to point 2, may not automate it due to the extra steps needed as explained in the concerns above.
 4. Flashing of Timer
     - At 10 second mark, the timer will flash in order to notify the score tracker to ring the bell to signal the 10 second countdown.
-5. Addition of more shortcut keys
-    - Can include for the corresponding Category 1 and Category 2 fouls positioning on the screen
-    - Current suggestions: Q,W,E,A,S,D (AO); I,O,P,J,K,L (AKA). 
-6. Any bugs that will occur in the event of using it. These bugs should be reported to be resolved.

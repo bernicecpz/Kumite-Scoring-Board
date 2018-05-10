@@ -3,13 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Kumite Scoring Board</title>
-  <link rel = "stylesheet" type = "text/css" href = "style.css"/> <!-- For layout -->
-  <link rel="stylesheet" type="text/css" href="introjs.css"> <!-- NOT IMPLEMENTED: Intended for the guided tour -->
+  <link rel = "stylesheet" type = "text/css" href = "resources/css/style.css"/> <!-- For layout -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- For Icons -->
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script type="text/javascript" src="intro.js"></script>
-  <script  src="functions.js"></script> <!-- DO NOT REMOVE THIS LINE: Logics/ required animations for the web applications -->
+  <script  src="resources/js/functions.js"></script> <!-- DO NOT REMOVE THIS LINE: Logics/ required animations for the web applications -->
 
 
 </head>
@@ -97,36 +94,14 @@
     </div>
 
     <!-- Instead of a guided tour, include a hover-over shortcut key menu -->
-    <i id="helpIcon" class="fa fa-question-circle-o"></i>
-
-    <template>
-      <div id="displayHelpShortcuts">
-      <img src="img/qwerty.svg"/>
-        <!-- 
-        <table>
-          <thead>
-              <tr>
-                <td>Shortcut Key</td>
-                <td>Function</td>
-              </tr>
-          </thead>
-          <tbody>
-              <tr>
-                <td>
-                  
-                </td>
-              </tr>
-          </tbody>
-        </table>
-      -->
-      </div>
-    </template>
-
-
-
+    <i id="helpIcon" class="fa fa-question-circle-o" onmouseover="showShortcuts('displayHelpShortcuts')" onmouseout="hideShortCuts('displayHelpShortcuts')"></i>
   </div>
 
-
+<!--  It affects the borders? 
+  <div id="displayHelpShortcuts">
+    <img src="resources/img/qwerty.png"/>
+  </div>
+-->
 
 </body>
 </html>

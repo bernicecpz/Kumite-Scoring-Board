@@ -127,3 +127,8 @@ Modified slightly to resolve and pass W3C CSS Validations
   width: 20%;
   height: auto;
 }
+
+
+#displayHelpShortcuts{
+  visibility: hidden;
+}
