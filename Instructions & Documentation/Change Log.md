@@ -4,6 +4,7 @@
 - For corresponding Category 1 and Category 2 fouls positioning on the screen
 - Current suggestions: Q,W,E,A,S,D (AO); I,O,P,J,K,L (AKA). These keys are representative of what is reflected on the keyboard and interface
 3. Replace S button to add 30 seconds to the +/= button. 
+4. Included the necessary codes from W3 CSS for the modal used for the Help Icon.
 
 
 # 4 January 2018

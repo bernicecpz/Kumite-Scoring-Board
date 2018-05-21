@@ -43,7 +43,7 @@ function setTimerButton(event) {
 
     //Check if there is an existing clock currently running
     //This is to safeguard against any accidental setting of the timer during the ongoing matches
-    if(!clockRunning){
+    if(!clockRunning){ //Set a bound to the adding of time by 30 seconds; Format won't be modified               
         switch(key){
           case 49:
             timeString = "01:00"
@@ -66,11 +66,8 @@ function setTimerButton(event) {
               timeString = "00:30"
               timeInMinutes = halfMinute;
             }else{
-              //Set a bound to the adding of time by 30 seconds; Format won't be modified              
-              if(timeInMinutes < (10*oneMinute) ){
                 //Check that the timing does not pass the 10 min mark then add 30 seconds
                 timeInMinutes = timeInMinutes + halfMinute;
-              }
             }
 
             break;
@@ -85,8 +82,8 @@ function setTimerButton(event) {
         minutesTD = Math.floor((timeInMinutes % (1000 * 60 * 60)) / (1000 * 60));
         secondsTD = Math.floor((timeInMinutes % (1000 * 60)) / 1000);
 
-        //If the seconds option is pressed, i.e. key "S", the formatting of the display will be formatted accordingly
-        if(key == 83){
+        //If the seconds option is pressed, i.e. key "+/=", the formatting of the display will be formatted accordingly
+        if(key ==187){
           //The if-else condition is to standardize the display of the timer in terms of leading zeros
           if(secondsTD > 10){
             timeDisplay.innerHTML = "0"+minutesTD + ":" + secondsTD;
@@ -183,21 +180,8 @@ window.onload = function(event){
 }
 
 //Miscellenous Functions 
-var icon = document.getElementById('helpIcon');
-if(icon){
-  document.getElementById('helpIcon').addEventListener("mouseover", showShortcuts);
-  document.getElementById('helpIcon').addEventListener("mouseout", hideShortcuts);
-}
 
 
-
-function showShortcuts(id){
-    document.getElementById(id).style.visibility = "visible";
-}
-
-function hideShortcuts(id){
-  document.getElementById(id).style.visibility = "hidden";
-}
 
 function keyCodeShortcut(event){
     //For keyCodes

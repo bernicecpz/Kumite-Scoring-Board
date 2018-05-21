@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>Kumite Scoring Board</title>
+
   <link rel = "stylesheet" type = "text/css" href = "resources/css/style.css"/> <!-- For layout -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- For Icons -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script  src="resources/js/functions.js"></script> <!-- DO NOT REMOVE THIS LINE: Logics/ required animations for the web applications -->
 
 
@@ -90,18 +92,15 @@
             <button id="Cat2_AKA_K" onclick="cat2_AKA_K()">K</button>
             <button id="Cat2_AKA_HC" onclick="cat2_AKA_HC()">HC</button>
           </div>
-
+          
     </div>
 
     <!-- Instead of a guided tour, include a hover-over shortcut key menu -->
-    <i id="helpIcon" class="fa fa-question-circle-o" onmouseover="showShortcuts('displayHelpShortcuts')" onmouseout="hideShortCuts('displayHelpShortcuts')"></i>
-  </div>
-
-<!--  It affects the borders? 
-  <div id="displayHelpShortcuts">
-    <img src="resources/img/qwerty.png"/>
-  </div>
--->
+   
+      <p><i id="helpIcon" class="fa fa-question-circle-o" onclick="document.getElementById('modal01').style.display='block'" class="w3-hover-opacity"></i></p>
+      <div id="modal01" class="w3-modal w3-animate-zoom" onclick="this.style.display='none'">
+        <img class="w3-modal-content" src="resources/img/keyboard-layout-table.png">
+      </div>
 
 </body>
 </html>
