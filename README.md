@@ -7,7 +7,7 @@ A dashboard used to keep track of scores for participant for sparring (kumite) m
 All suggestions are welcome. If any bugs are found while using this application, please feel free to drop me a comment here or email @ bernicecpz@gmail.com
 
 ## Instructions
-Please refer to the "Instructions & Documentation" Folder on how to use the Kumite-Scoring-Board web application.  
+Please refer to the "Instructions & Documentation" Folder on how to use the Kumite-Scoring-Board web application. Shortcut keys can be viewed through the '?' icon at the top right corner.
 
 ## Technology used
 - HTML/CSS
@@ -30,18 +30,15 @@ Please refer to the "Instructions & Documentation" Folder on how to use the Kumi
 ## Potential Features
 *NOTE: These features are implemented and delivered at best-effort basis, depending on time availability.*
 
-1. Help Icons: For quick viewing of shortcut keys to press by hovering over/ clicking the help icon
-    - Will need to ensure that the overall dimension of the scoreboard is not affected by the inclusion of the help icon.
-    - The display would be a keyboard itself. This will be more meaningful, considering that the shortcut keys are standardized
-2. Automation of awarding SENSHU (Further research & requirement gathering required)
+1. Automation of awarding SENSHU (Further research & requirement gathering required)
     - Definition of SENSHU: "... understood that one contestant has achieved the** first instance of scoring** on the opponent **without having the opponent also score** before the signal."
     - For now, advised against automating due to the extra steps if intervention is required.
       - Perhaps configuring the settings to award automatically by default
       - Give option to automate the process of awarding SENSHU
       - Currently advised against automating it due to the steps required to revert any decisions would be more than if this step is managed manually.
-3. Absolute Winning (8 point difference)
+2. Absolute Winning (8 point difference)
     - Set the timer to 00:00
     - Concerns: If the score-tracker give the wrong point either side, and the opponent given the points is one point away from a 8 point difference. The issue would be how do I rectify or revert this effect of resetting the timer? 
     - Similar to point 2, may not automate it due to the extra steps needed as explained in the concerns above.
-4. Flashing of Timer
+3. Flashing of Timer
     - At 10 second mark, the timer will flash in order to notify the score tracker to ring the bell to signal the 10 second countdown.

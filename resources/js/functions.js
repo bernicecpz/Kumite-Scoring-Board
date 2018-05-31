@@ -16,7 +16,6 @@ var t = 0, timeInMinutes = 0, currentTime = 0, deadline = 0;
 
 var minutes = 0, seconds = 0, minutesTD = 0, secondsTD = 0;
 
-var timeObject;
 var oneSecond = 1000;
 var oneMinute = 60 * oneSecond;
 var halfMinute = 30 * oneSecond;
@@ -162,6 +161,8 @@ function pauseOrResumeClock(paused){
   }
 }
 
+
+//Ongoing checking for mouse clicks and button pressed.
 window.onload = function(event){
 
     //For mouseclicks - handle start, pause & resume clock button clicks
