@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Kumite Scoring Board</title>
@@ -19,36 +19,36 @@
   -->
 
   <div id="blueRedDiv">
-    <!-- Then on each side of the background, label with AO and AKA -->
-    <!--LEFT-->
-    <div id="left-AO">AO
-      <div id="AO_PointZone" onclick="aoPointZoneAdd()"><!-- Values from JS function in onpageshow attribute in body tag --></div>
+      <!-- Then on each side of the background, label with AO and AKA -->
+      <!--LEFT-->
+      <div id="left-AO">AO
+        <div id="AO_PointZone" onclick="aoPointZoneAdd()"><!-- Values from JS function in onpageshow attribute in body tag --></div>
 
-      <!-- 3 buttons for the fouls for each category
-        CHUKOKU, KEIKOKU, HANSHUKO-CHUI
-      -->
+        <!-- 3 buttons for the fouls for each category
+          CHUKOKU, KEIKOKU, HANSHUKO-CHUI
+        -->
 
-        <!-- Depending on the respective dojos preferences, they can choose to comment out the SENSHU options-->
-        <div>
-          <label>SENSHU </label>
-          <input type="checkbox" id="senshuAO">
-        </div>
+          <!-- Depending on the respective dojos preferences, they can choose to comment out the SENSHU options-->
+          <div>
+            <label>SENSHU </label>
+            <input type="checkbox" id="senshuAO">
+          </div>
 
-        <div id="cat1FoulsAO">
+          <div id="cat1FoulsAO">
 
-          <button id="Cat1_AO_C" onclick="cat1_AO_C()">C</button>
-          <button id="Cat1_AO_K" onclick="cat1_AO_K()">K</button>
-          <button id="Cat1_AO_HC" onclick="cat1_AO_HC()">HC</button>
-        </div>
+            <button id="Cat1_AO_C" onclick="cat1_AO_C()">C</button>
+            <button id="Cat1_AO_K" onclick="cat1_AO_K()">K</button>
+            <button id="Cat1_AO_HC" onclick="cat1_AO_HC()">HC</button>
+          </div>
 
-        <div id="cat2FoulsAO">
-          <button id="Cat2_AO_C" onclick="cat2_AO_C()">C</button>
-          <button id="Cat2_AO_K" onclick="cat2_AO_K()">K</button>
-          <button id="Cat2_AO_HC" onclick="cat2_AO_HC()">HC</button>
-        </div>
+          <div id="cat2FoulsAO">
+            <button id="Cat2_AO_C" onclick="cat2_AO_C()">C</button>
+            <button id="Cat2_AO_K" onclick="cat2_AO_K()">K</button>
+            <button id="Cat2_AO_HC" onclick="cat2_AO_HC()">HC</button>
+          </div>
 
-    </div>
-
+      </div>
+    
     <!--CENTRE-->
     <div id="center-timer">
 
@@ -97,10 +97,10 @@
 
     <!-- Instead of a guided tour, include a hover-over shortcut key menu -->
    
-      <p><i id="helpIcon" class="fa fa-question-circle-o" onclick="document.getElementById('modal01').style.display='block'" class="w3-hover-opacity"></i></p>
-      <div id="modal01" class="w3-modal w3-animate-zoom" onclick="this.style.display='none'">
-        <img class="w3-modal-content" src="resources/img/keyboard-layout-table.png">
+      <p><i id="helpIcon" class="fa fa-question-circle-o w3-hover-opacity" onclick="document.getElementById('helpIconModal').style.display='block'"></i></p>
+      <div id="helpIconModal" class="w3-modal w3-animate-zoom" onclick="this.style.display='none'">
+        <img class="w3-modal-content" src="resources/img/keyboard-layout-table.png" alt="Instructions for shortcut keys">
       </div>
-
+  </div>
 </body>
 </html>

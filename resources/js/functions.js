@@ -84,18 +84,23 @@ function setTimerButton(event) {
         //If the seconds option is pressed, i.e. key "+/=", the formatting of the display will be formatted accordingly
         if(key ==187){
           //The if-else condition is to standardize the display of the timer in terms of leading zeros
-          if(secondsTD > 10){
-            timeDisplay.innerHTML = "0"+minutesTD + ":" + secondsTD;
-          }else if(minutesTD >= 10){
-            if(secondsTD < 10){
-              timeDisplay.innerHTML = minutesTD + ":0" + secondsTD;
-            }else{
+          if(minutesTD >= 10){
+            if(secondsTD > 10){
               timeDisplay.innerHTML = minutesTD + ":" + secondsTD;
+            }else{
+              timeDisplay.innerHTML = minutesTD + ":0" + secondsTD;
             }
-           
+          }else if(minutesTD < 10){
+            if(secondsTD > 10){
+              timeDisplay.innerHTML = "0"+minutesTD + ":" + secondsTD;
+            }else{
+              timeDisplay.innerHTML = "0"+minutesTD + ":0" + secondsTD;
+            }
+
           }else{
-            timeDisplay.innerHTML = "0"+minutesTD + ":0" + secondsTD;
+            timeDisplay.innerHTML = timeString;
           }
+
         }else{
           timeDisplay.innerHTML = timeString;
         }
