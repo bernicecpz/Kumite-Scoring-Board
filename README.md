@@ -29,7 +29,7 @@ Please refer to the "Instructions & Documentation" Folder on how to use the Kumi
 
 ## Potential Features
 *NOTE: These features are implemented and delivered at best-effort basis, depending on time availability.*
-
+URGENT: Add in the CSS file 
 1. Automation of awarding SENSHU (Further research & requirement gathering required)
     - Definition of SENSHU: "... understood that one contestant has achieved the** first instance of scoring** on the opponent **without having the opponent also score** before the signal."
     - For now, advised against automating due to the extra steps if intervention is required.
