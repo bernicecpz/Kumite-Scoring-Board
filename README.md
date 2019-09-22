@@ -26,19 +26,34 @@ Please refer to the "Instructions & Documentation" Folder on how to use the Kumi
 5. Updates in the WKF Rules: there is a new rule of SENSHU for first point unopposed advantage.
     - Including a simple annotation, i.e. checkbox would aid the score tracker to note down who is awarded the advantage throughout the matches
 
+## Known Issues
+Currently, the known issues are related to UX/UI issues. It may take some time to update them. I will attempt to resolve these issues while working on potential features. 
+Issues will be attempted to be resolved at best-effort basis, depending on time availability.
+1. If 30 seconds is pressed first, not able to increment to other values.
+Workaround: Must set the minutes before the seconds
+2. The display/entire dashboard is compatible to display resolution (1920 x 1080) and used with the "Duplicate" screen for the project settings.
+Workaround: May choose to zoom in/out by 10-20%
 
 ## Potential Features
 *NOTE: These features are implemented and delivered at best-effort basis, depending on time availability.*
-URGENT: Add in the CSS file 
-1. Automation of awarding SENSHU (Further research & requirement gathering required)
+1. Switching of background (AO/AKA <-> AKA/AO)
+    - To be according to the competitors' position at the start.
+    - Switching the position of the background would enable the score-keeper to manage the scores more easily, regardless of the experience of the score-keeper
+        - Will I be able to swap the entire values between the 2 colors?
+        - Should I do that? If the user press once too many times, will there be an issue?
+        - How do I safeguard the changes? Can I save a backup of the information display on the screen into a text file?
+    - Note to Self: Instructions in keyboard shortcuts and the table must be updated upon implementation to avoid confusion
+
+## Archived Features (Highly unlikely to implement them due to the reasons stated in the points)
+- Automation of awarding SENSHU (Further research & requirement gathering required)
     - Definition of SENSHU: "... understood that one contestant has achieved the** first instance of scoring** on the opponent **without having the opponent also score** before the signal."
     - For now, advised against automating due to the extra steps if intervention is required.
       - Perhaps configuring the settings to award automatically by default
       - Give option to automate the process of awarding SENSHU
       - Currently advised against automating it due to the steps required to revert any decisions would be more than if this step is managed manually.
-2. Absolute Winning (8 point difference)
+- Absolute Winning (8 point difference)
     - Set the timer to 00:00
     - Concerns: If the score-tracker give the wrong point either side, and the opponent given the points is one point away from a 8 point difference. The issue would be how do I rectify or revert this effect of resetting the timer? 
     - Similar to point 2, may not automate it due to the extra steps needed as explained in the concerns above.
-3. Flashing of Timer
+- Flashing of Timer
     - At 10 second mark, the timer will flash in order to notify the score tracker to ring the bell to signal the 10 second countdown.
