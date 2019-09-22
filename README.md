@@ -39,9 +39,10 @@ Workaround: May choose to zoom in/out by 10-20%
 1. Switching of background (AO/AKA <-> AKA/AO)
     - To be according to the competitors' position at the start.
     - Switching the position of the background would enable the score-keeper to manage the scores more easily, regardless of the experience of the score-keeper
-        - Will I be able to swap the entire values between the 2 colors?
-        - Should I do that? If the user press once too many times, will there be an issue?
-        - How do I safeguard the changes? Can I save a backup of the information display on the screen into a text file?
+        - Feature considerations:
+          1. Will I be able to swap the entire values between the 2 colors?
+          2. Should I do that? If the user press once too many times, will there be an issue?
+          3. How do I safeguard the changes? Can I save a backup of the information display on the screen into a text file?
     - Note to Self: Instructions in keyboard shortcuts and the table must be updated upon implementation to avoid confusion
 
 ## Archived Features (Highly unlikely to implement them due to the reasons stated in the points)
