@@ -45,7 +45,8 @@ Workaround: May choose to zoom in/out by 10-20%
           3. How do I safeguard the changes? Can I save a backup of the information display on the screen into a text file?
     - Note to Self: Instructions in keyboard shortcuts and the table must be updated upon implementation to avoid confusion
 
-## Archived Features (Highly unlikely to implement them due to the reasons stated in the points)
+## Archived Features
+*Highly unlikely to implement them due to the reasons stated in the points*
 - Automation of awarding SENSHU (Further research & requirement gathering required)
     - Definition of SENSHU: "... understood that one contestant has achieved the** first instance of scoring** on the opponent **without having the opponent also score** before the signal."
     - For now, advised against automating due to the extra steps if intervention is required.
