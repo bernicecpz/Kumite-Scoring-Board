@@ -29,9 +29,9 @@ Please refer to the "Instructions & Documentation" Folder on how to use the Kumi
 ## Known Issues
 Currently, the known issues are related to UX/UI issues. It may take some time to update them. I will attempt to resolve these issues while working on potential features. 
 *Issues will be attempted to be resolved at best-effort basis, depending on time availability.*
-1. If 30 seconds is pressed first, not able to increment to other values.
+1. If 30 seconds is pressed first, not able to increment to other values.  
 Workaround: Must set the minutes before the seconds
-2. The display/entire dashboard is compatible to display resolution (1920 x 1080) and used with the "Duplicate" screen for the project settings.
+2. The display/entire dashboard is compatible to display resolution (1920 x 1080) and used with the "Duplicate" screen for the project settings.  
 Workaround: May choose to zoom in/out by 10-20%
 
 ## Potential Features
