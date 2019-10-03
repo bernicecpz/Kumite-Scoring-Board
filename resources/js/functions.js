@@ -61,14 +61,8 @@ function setTimerButton(event) {
             timeInMinutes = 4*oneMinute;
             break;
           case 187:
-            if(timeInMinutes < oneMinute){
-              timeString = "00:30"
-              timeInMinutes = halfMinute;
-            }else{
-                //Check that the timing does not pass the 10 min mark then add 30 seconds
-                timeInMinutes = timeInMinutes + halfMinute;
-            }
-
+            //Check that the timing does not pass the 10 min mark then add 30 seconds
+            timeInMinutes = timeInMinutes + halfMinute;
             break;
         }
 
