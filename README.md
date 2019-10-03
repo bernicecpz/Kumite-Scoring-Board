@@ -21,8 +21,8 @@ Please refer to the "Instructions & Documentation" Folder on how to use the Kumi
 2. Timer is limited to minutes control. Current rules requires the control of seconds (30 seconds), especially for junior matches
 3. Background coverage is highly dependent on the resolution of the laptops used
     - Currently the zoom may change the font size of the elements, may need to take extra care while doing the CSS
-4. Difficult to manage and modify due to lack of documentation and software. Current technology used is flash content, which is restrictive in modification.
-    - HTML and Javascript will be used for the reconstruction of the application,hopefully making it easier to maintain and modify in the future
+4. Difficult to manage and modify due to lack of documentation and software. The initial version of the scoreboard used flash content, which is restrictive in modification.
+    - HTML and Javascript will be used for the reconstruction of the application, hopefully making it easier to maintain and modify in the future
 5. Updates in the WKF Rules: there is a new rule of SENSHU for first point unopposed advantage.
     - Including a simple annotation, i.e. checkbox would aid the score tracker to note down who is awarded the advantage throughout the matches
 
@@ -35,7 +35,7 @@ Workaround: Must set the minutes before the seconds
 Workaround: May choose to zoom in/out by 10-20%
 
 ## Potential Features
-*NOTE: These features are implemented and delivered at best-effort basis, depending on time availability.*
+*NOTE: These features will be implemented and delivered at best-effort basis, depending on time availability.*
 1. Switching of background (AO/AKA <-> AKA/AO)
     - To be according to the competitors' position at the start.
     - Switching the position of the background would enable the score-keeper to manage the scores more easily, regardless of the experience of the score-keeper
@@ -44,11 +44,16 @@ Workaround: May choose to zoom in/out by 10-20%
           2. Should I do that? If the user press once too many times, will there be an issue?
           3. How do I safeguard the changes? Can I save a backup of the information display on the screen into a text file?
     - Note to Self: Instructions in keyboard shortcuts and the table must be updated upon implementation to avoid confusion
-
+2. Backup of scores / Reporting
+    - Can allow score-keeper to backup the data by exporting into CSV file (?)
+    - Save into sessionStorage / localStorage of the browser; worst case scenario: technical way of checking. 
+        - May not be good for the user of the laptop, use up unnecessary resources(?). 
+    - Perhaps if the name of the participant can be included, it can help in compiling the scores of the matches in the event. 
+        - However, this is high complexity & must be reliable to be used. Extra care should be taken if attempt to deliver this feature. 
 ## Archived Features
 *Highly unlikely to implement them due to the reasons stated in the points*
 - Automation of awarding SENSHU (Further research & requirement gathering required)
-    - Definition of SENSHU: "... understood that one contestant has achieved the** first instance of scoring** on the opponent **without having the opponent also score** before the signal."
+    - Definition of SENSHU: "... understood that one contestant has achieved the **first instance of scoring** on the opponent **without having the opponent also score** before the signal."
     - For now, advised against automating due to the extra steps if intervention is required.
       - Perhaps configuring the settings to award automatically by default
       - Give option to automate the process of awarding SENSHU
@@ -58,4 +63,5 @@ Workaround: May choose to zoom in/out by 10-20%
     - Concerns: If the score-tracker give the wrong point either side, and the opponent given the points is one point away from a 8 point difference. The issue would be how do I rectify or revert this effect of resetting the timer? 
     - Similar to point 2, may not automate it due to the extra steps needed as explained in the concerns above.
 - Flashing of Timer
-    - At 10 second mark, the timer will flash in order to notify the score tracker to ring the bell to signal the 10 second countdown.
+    - At 10 second mark, the timer will flash in order to notify the score tracker to ring the bell to signal the 10 second countdown.  
+        - May unintentionally be distracting
