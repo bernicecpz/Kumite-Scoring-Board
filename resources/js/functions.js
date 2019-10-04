@@ -187,111 +187,113 @@ window.onload = function(event){
 
 //Miscellenous Functions 
 
-
-
-function keyCodeShortcut(event){
-    //For keyCodes
-    key = event.keyCode;
-    switch(key){
-      case 13: //Handle start, pause & resume clock using "Enter" key
-        if(clockRunning){
-          pauseOrResumeClock(paused)
-        }else{
-          //If the time is more than 0. To guard against the NaN scenario
-          if(timeInMinutes > 0){
-            run_clock();
-            clockRunning = true;
+  function keyCodeShortcut(event){
+      //For keyCodes
+      key = event.keyCode;
+      switch(key){
+        case 13: //Handle start, pause & resume clock using "Enter" key
+          if(clockRunning){
+            pauseOrResumeClock(paused)
+          }else{
+            //If the time is more than 0. To guard against the NaN scenario
+            if(timeInMinutes > 0){
+              run_clock();
+              clockRunning = true;
+            }
           }
-        }
-      break;
-      
-      //Managing of Foul Categories
-      //AO
-      case 81: //Press Q - AO CAT1 C 
-        cat1_AO_C();
-      break;
-      
-      case 87: //Press W - AO CAT1 K
-        cat1_AO_K();
-      break;
+        break;
+        
+        //Managing of Foul Categories
+        //AO
+        case 81: //Press Q - AO CAT1 C 
+          cat1_AO_C();
+        break;
+        
+        case 87: //Press W - AO CAT1 K
+          cat1_AO_K();
+        break;
 
-      case 69: //Press E -  AO CAT1 HC
-        cat1_AO_HC();
-      break;
+        case 69: //Press E -  AO CAT1 HC
+          cat1_AO_HC();
+        break;
 
-      case 65: //Press A - AO CAT2 C
-        cat2_AO_C();
-      break;
+        case 65: //Press A - AO CAT2 C
+          cat2_AO_C();
+        break;
 
-      case 83: //Press S - AO CAT2 K
-        cat2_AO_K();
-      break;
+        case 83: //Press S - AO CAT2 K
+          cat2_AO_K();
+        break;
 
-      case 68: //Press D - AO CAT2 HC
-        cat2_AO_HC();
-      break;
+        case 68: //Press D - AO CAT2 HC
+          cat2_AO_HC();
+        break;
 
-      //AKA
-      case 73: //Press I - AKA CAT1 C
-        cat1_AKA_C();
-      break;
+        //AKA
+        case 73: //Press I - AKA CAT1 C
+          cat1_AKA_C();
+        break;
 
-      case 79: //Press O - AO CAT1 K
-        cat1_AKA_K(); 
-      break;
+        case 79: //Press O - AO CAT1 K
+          cat1_AKA_K(); 
+        break;
 
-      case 80: //Press P - AO CAT1 HC
-        cat1_AKA_HC();
-      break;
+        case 80: //Press P - AO CAT1 HC
+          cat1_AKA_HC();
+        break;
 
-      case 74: //Press J - AO CAT2 C
-        cat2_AKA_C();
-      break;
+        case 74: //Press J - AO CAT2 C
+          cat2_AKA_C();
+        break;
 
-      case 75: //Press K - AO CAT2 K
-        cat2_AKA_K();
-      break;
+        case 75: //Press K - AO CAT2 K
+          cat2_AKA_K();
+        break;
 
-      case 76: //Press L - AO CAT2 HC
-        cat2_AKA_HC();
-      break;
+        case 76: //Press L - AO CAT2 HC
+          cat2_AKA_HC();
+        break;
 
-      case 27: //Reset the interface after a match, BUT will safeguard the timer once it has been started. 
-        if(!clockRunning){ //safeguard against clearing the values during ongoing matches
-          //Timer
-          timeString = "00:00";
-          t = 0;
-          timeInMinutes = 0;
-          currentTime = 0;
-          deadline = 0;
-          clockRunning = false;
-          minutes = 0;
-          seconds = 0;
-          minutesTD = 0;
-          secondsTD = 0;
+        case 27: //Reset the interface after a match, BUT will safeguard the timer once it has been started. 
+          if(!clockRunning){ //safeguard against clearing the values during ongoing matches
+            //Timer
+            timeString = "00:00";
+            t = 0;
+            timeInMinutes = 0;
+            currentTime = 0;
+            deadline = 0;
+            clockRunning = false;
+            minutes = 0;
+            seconds = 0;
+            minutesTD = 0;
+            secondsTD = 0;
 
-          //Fouls
-          var element = document.querySelectorAll('[id^="Cat"]');
-          for (var i = 0; i < element.length; ++i) {
-            element[i].style.backgroundColor = "white";
+            //Fouls
+            var element = document.querySelectorAll('[id^="Cat"]');
+            for (var i = 0; i < element.length; ++i) {
+              element[i].style.backgroundColor = "white";
+            }
+
+            //SENSHU
+            element = document.querySelectorAll('[id^="senshu"]');
+            for (var i = 0; i < element.length; ++i) {
+              element[i].checked = false;
+            }
+
+
+            //Points
+            AO_Points = 0;
+            AKA_Points = 0;
+            aoPointZone.innerHTML = AO_Points;
+            akaPointZone.innerHTML = AKA_Points;
           }
+        break;
+      }
+  }
 
-          //SENSHU
-          element = document.querySelectorAll('[id^="senshu"]');
-          for (var i = 0; i < element.length; ++i) {
-            element[i].checked = false;
-          }
-
-
-          //Points
-          AO_Points = 0;
-          AKA_Points = 0;
-          aoPointZone.innerHTML = AO_Points;
-          akaPointZone.innerHTML = AKA_Points;
-        }
-      break;
-    }
-}
+  function toggleSwitchBackground(event){
+    
+  }
 
 //AO
   //Point Manipulation for AO
