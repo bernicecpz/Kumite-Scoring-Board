@@ -19,7 +19,7 @@ input[type="checkbox"]{
 }
 
 
-#helpIcon{
+#helpIcon, #exchangeIcon{
   font-size: 15px;
   padding: 5px;
 }
@@ -47,12 +47,32 @@ Modified slightly to resolve and pass W3C CSS Validations
  font-size: 100%;
 }
 
+#redBlueDiv{
+  width:100vw;
+  height: 100vh;
+  background-color: #ff0000;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0300ea', endColorstr='#ff0000',GradientType=1 ); /* IE6-9 */
+  background:-moz-linear-gradient(right, #052afc 50%, #ff0000 50%); /* Firefox 3.6+ */
+  background:-webkit-linear-gradient(right, #052afc 50%, #ff0000 50%); /* W3C */
+  background:-ms-linear-gradient(right, #052afc 50%, #ff0000 50%);/* Chrome10+,Safari5.1+ */
+  background:linear-gradient( #ff0000 50%,  #052afc 50%); /* Opera 11.10+ */
+  background:linear-gradient(to left, #052afc 50%, #ff0000 50%); /* Only IE11+; seems to work different from the rest, "to" seems to invert the positioning.*/
+  background:-webkit-gradient(linear, right bottom, left bottom, color-stop(50%,#052afc), color-stop(50%,#ff0000)); /* Safari 4+,Chrome 2+ */
+  display: flex;
+  position: relative;
+  text-align:center;
+  background-size: cover; /*This is key to ensure that the background scale to zoom.*/
+  font-size: 100%;
+
+}
+
 /*For top portion of score board*/
 #left-AO{
   float:left;
   width:50%;
   font-size:50px;
   color:white;
+  background-size: cover; 
 }
 
 #center-timer{
@@ -64,6 +84,7 @@ Modified slightly to resolve and pass W3C CSS Validations
   border-style: solid;
   border-color: black;
   vertical-align: text-top;
+  background-size: cover; 
 }
 
 #right-AKA{
@@ -71,6 +92,7 @@ Modified slightly to resolve and pass W3C CSS Validations
   width:50%;
   font-size:50px;
   color:white;
+  background-size: cover; 
 }
 
 /*For middle portion of score board*/
@@ -78,12 +100,14 @@ Modified slightly to resolve and pass W3C CSS Validations
   align-content: center;
   margin-top: 10%; /*Percent will be shifted here to adjust the spacing*/
   font-size:200px;
+  background-size: cover; 
 }
 
 #buttonDiv{
   width: auto;
   height: 115px;
   align-items: center;
+  background-size: cover; 
 }
 
 #AO-minus,#AKA-minus{
@@ -92,6 +116,7 @@ Modified slightly to resolve and pass W3C CSS Validations
   font-size:15px;
   position:relative;
   margin-top: 22%;
+  background-size: cover; 
 }
 
 /*For the bottom portion of score board*/
@@ -105,12 +130,14 @@ Modified slightly to resolve and pass W3C CSS Validations
   width: 100%;
   height: auto;
   padding: 5px;
+  background-size: cover; 
 }
 
 #cat1FoulsAO,#cat2FoulsAO,#cat1FoulsAKA,#cat2FoulsAKA{
   align-self: center;
   margin: 2%;
   padding-bottom:5%;
+  background-size: cover; 
 }
 
 
@@ -125,6 +152,7 @@ Modified slightly to resolve and pass W3C CSS Validations
   text-align: center;
   width: 20%;
   height: auto;
+  background-size: cover; 
 }
 
 
