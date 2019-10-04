@@ -12,6 +12,7 @@ var aoPointZone, akaPointZone;
 var timeDisplay;
 var clockRunning = false;
 var timeString = "00:00";
+var max_time_limit = 60 * oneMinute;
 var t = 0, timeInMinutes = 0, currentTime = 0, deadline = 0;
 
 var minutes = 0, seconds = 0, minutesTD = 0, secondsTD = 0;
@@ -56,7 +57,7 @@ function setTimerButton(event) {
           case 52:
             timeInMinutes = 4 * oneMinute;
             break;
-          case 187:
+          case 192:
             //Check that the timing does not pass the 10 min mark then add 30 seconds
             timeInMinutes = timeInMinutes + halfMinute;
             break;
@@ -70,15 +71,10 @@ function setTimerButton(event) {
         minutesTD = Math.floor((timeInMinutes % (1000 * 60 * 60)) / (1000 * 60));
         secondsTD = Math.floor((timeInMinutes % (1000 * 60)) / 1000);
 
-        //If the seconds option is pressed, i.e. key "+/=", the formatting of the display will be formatted accordingly
-        if (key == 187) {
-          //The if-else condition is to standardize the display of the timer in terms of leading zeros
-          var minutesDisplay = minutesTD >= 10 ? minutesTD : "0" + minutesTD;
-          var secondsDisplay = secondsTD >= 10 ? secondsTD : "0" + secondsTD;
-          timeDisplay.innerHTML = minutesDisplay + ":" + secondsDisplay;
-        } else {
-          timeDisplay.innerHTML = timeString;
-        }
+        //To format the time in seconds into minutes and seconds onto the display in terms of leading zeros
+        var minutesDisplay = minutesTD >= 10 ? minutesTD : "0" + minutesTD;
+        var secondsDisplay = secondsTD >= 10 ? secondsTD : "0" + secondsTD;
+        timeDisplay.innerHTML = minutesDisplay + ":" + secondsDisplay;
     }
 }
 
