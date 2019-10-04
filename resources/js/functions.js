@@ -42,36 +42,25 @@ function setTimerButton(event) {
 
     //Check if there is an existing clock currently running
     //This is to safeguard against any accidental setting of the timer during the ongoing matches
-    if(!clockRunning){ //Set a bound to the adding of time by 30 seconds; Format won't be modified               
-        switch(key){
+    if (!clockRunning) { //Set a bound to the adding of time by 30 seconds; Format won't be modified               
+        switch (key) {
           case 49:
-            timeString = "01:00"
             timeInMinutes = oneMinute;
             break;
           case 50:
-            timeString = "02:00"
-            timeInMinutes = 2*oneMinute;
+            timeInMinutes = 2 * oneMinute;
             break;
           case 51:
-            timeString = "03:00"
-            timeInMinutes = 3*oneMinute;
+            timeInMinutes = 3 * oneMinute;
             break;
           case 52:
-            timeString = "04:00"
-            timeInMinutes = 4*oneMinute;
+            timeInMinutes = 4 * oneMinute;
             break;
           case 187:
-            if(timeInMinutes < oneMinute){
-              timeString = "00:30"
-              timeInMinutes = halfMinute;
-            }else{
-                //Check that the timing does not pass the 10 min mark then add 30 seconds
-                timeInMinutes = timeInMinutes + halfMinute;
-            }
-
+            //Check that the timing does not pass the 10 min mark then add 30 seconds
+            timeInMinutes = timeInMinutes + halfMinute;
             break;
         }
-
 
         //Allowing setting of the time if there isn't an existing clock.
         currentTime = Date.parse(new Date());
@@ -82,26 +71,12 @@ function setTimerButton(event) {
         secondsTD = Math.floor((timeInMinutes % (1000 * 60)) / 1000);
 
         //If the seconds option is pressed, i.e. key "+/=", the formatting of the display will be formatted accordingly
-        if(key ==187){
+        if (key == 187) {
           //The if-else condition is to standardize the display of the timer in terms of leading zeros
-          if(minutesTD >= 10){
-            if(secondsTD > 10){
-              timeDisplay.innerHTML = minutesTD + ":" + secondsTD;
-            }else{
-              timeDisplay.innerHTML = minutesTD + ":0" + secondsTD;
-            }
-          }else if(minutesTD < 10){
-            if(secondsTD > 10){
-              timeDisplay.innerHTML = "0"+minutesTD + ":" + secondsTD;
-            }else{
-              timeDisplay.innerHTML = "0"+minutesTD + ":0" + secondsTD;
-            }
-
-          }else{
-            timeDisplay.innerHTML = timeString;
-          }
-
-        }else{
+          var minutesDisplay = minutesTD >= 10 ? minutesTD : "0" + minutesTD;
+          var secondsDisplay = secondsTD >= 10 ? secondsTD : "0" + secondsTD;
+          timeDisplay.innerHTML = minutesDisplay + ":" + secondsDisplay;
+        } else {
           timeDisplay.innerHTML = timeString;
         }
     }
