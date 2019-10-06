@@ -21,6 +21,7 @@ var oneSecond = 1000;
 var oneMinute = 60 * oneSecond;
 var halfMinute = 30 * oneSecond;
 
+var isAoLeft = true;
 
 //Initialization at Startup
 function initializePointZonesAndTimer() {
@@ -262,9 +263,23 @@ window.onload = function(event){
       }
   }
 
-  function toggleSwitchBackground(event){
-    
+function toggleSwitchBackground() {
+  if (isAoLeft) {
+    document.getElementById("blueRedDiv").setAttribute("id", "redBlueDiv");
+
+    $("#center-timer").before($("#right-AKA"));
+    $("#left-AO").before($("#right-AKA"));
+    $("#left-AO").before($("#center-timer"));
+  } else {
+    document.getElementById("redBlueDiv").setAttribute("id", "blueRedDiv");
+
+    $("#center-timer").before($("#left-AO"));
+    $("#right-AKA").before($("#left-AO"));
+    $("#right-AKA").before($("#center-timer"));
   }
+
+  isAoLeft = !isAoLeft;
+}
 
 //AO
   //Point Manipulation for AO
