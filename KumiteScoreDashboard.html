@@ -9,24 +9,17 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script  src="resources/js/functions.js"></script> <!-- DO NOT REMOVE THIS LINE: Logics/ required animations for the web applications -->
-
-
 </head>
 
 <body onpageshow="initializePointZonesAndTimer()"  onkeyup="setTimerButton(event)" onkeydown="keyCodeShortcut(event)">
-  <!-- blueRedDiv:
-        Blue (AO) & Red (AKA) background that will provide the interface
-  -->
-
+  <!-- blueRedDiv: Blue (AO) & Red (AKA) background that will provide the interface -->
   <div id="blueRedDiv">
       <!-- Then on each side of the background, label with AO and AKA -->
       <!--LEFT-->
       <div id="left-AO">AO
         <div id="AO_PointZone" onclick="aoPointZoneAdd()"><!-- Values from JS function in onpageshow attribute in body tag --></div>
 
-        <!-- 3 buttons for the fouls for each category
-          CHUKOKU, KEIKOKU, HANSHUKO-CHUI
-        -->
+        <!-- 3 buttons for the fouls for each category: CHUKOKU, KEIKOKU, HANSHUKO-CHUI -->
 
           <!-- Depending on the respective dojos preferences, they can choose to comment out the SENSHU options-->
           <div>
@@ -35,7 +28,6 @@
           </div>
 
           <div id="cat1FoulsAO">
-
             <button id="Cat1_AO_C" onclick="cat1_AO_C()">C</button>
             <button id="Cat1_AO_K" onclick="cat1_AO_K()">K</button>
             <button id="Cat1_AO_HC" onclick="cat1_AO_HC()">HC</button>
@@ -67,32 +59,29 @@
         <div><b>Category 1</b></div>
         <br/>
         <div><b>Category 2</b></div>
-
       </div>
     </div>
 
-
     <!--RIGHT-->
     <div id="right-AKA">AKA
-          <div id="AKA_PointZone" onclick="akaPointZoneAdd()"><!-- Values from JS function in onpageshow attribute in body tag --> </div>
+      <div id="AKA_PointZone" onclick="akaPointZoneAdd()"><!-- Values from JS function in onpageshow attribute in body tag --> </div>
 
-          <div>
-              <label>SENSHU </label>
-              <input type="checkbox" id="senshuAKA">
-          </div>
+      <div>
+          <label>SENSHU </label>
+          <input type="checkbox" id="senshuAKA">
+      </div>
 
-          <div id="cat1FoulsAKA">
-            <button id="Cat1_AKA_C" onclick="cat1_AKA_C()">C</button>
-            <button id="Cat1_AKA_K" onclick="cat1_AKA_K()">K</button>
-            <button id="Cat1_AKA_HC" onclick="cat1_AKA_HC()">HC</button>
-          </div>
+      <div id="cat1FoulsAKA">
+        <button id="Cat1_AKA_C" onclick="cat1_AKA_C()">C</button>
+        <button id="Cat1_AKA_K" onclick="cat1_AKA_K()">K</button>
+        <button id="Cat1_AKA_HC" onclick="cat1_AKA_HC()">HC</button>
+      </div>
 
-          <div id="cat2FoulsAKA">
-            <button id="Cat2_AKA_C" onclick="cat2_AKA_C()">C</button>
-            <button id="Cat2_AKA_K" onclick="cat2_AKA_K()">K</button>
-            <button id="Cat2_AKA_HC" onclick="cat2_AKA_HC()">HC</button>
-          </div>
-          
+      <div id="cat2FoulsAKA">
+        <button id="Cat2_AKA_C" onclick="cat2_AKA_C()">C</button>
+        <button id="Cat2_AKA_K" onclick="cat2_AKA_K()">K</button>
+        <button id="Cat2_AKA_HC" onclick="cat2_AKA_HC()">HC</button>
+      </div>
     </div>
 
     <!-- Instead of a guided tour, include a hover-over shortcut key menu -->

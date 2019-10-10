@@ -50,6 +50,7 @@ Workaround: May choose to zoom in/out by 10-20%
         - May not be good for the user of the laptop, use up unnecessary resources(?). 
     - Perhaps if the name of the participant can be included, it can help in compiling the scores of the matches in the event. 
         - However, this is high complexity & must be reliable to be used. Extra care should be taken if attempt to deliver this feature. 
+
 ## Archived Features
 *Highly unlikely to implement them due to the reasons stated in the points*
 - Automation of awarding SENSHU (Further research & requirement gathering required)
