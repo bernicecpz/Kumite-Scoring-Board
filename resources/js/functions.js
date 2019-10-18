@@ -44,24 +44,25 @@ function setTimerButton(event) {
   // Check if there is an existing clock currently running
   // This is to safeguard against any accidental setting of the timer during the ongoing matches
   if (!clockRunning) { // Set a bound to the adding of time by 30 seconds; Format won't be modified               
+    
     switch (key) {
-      case 49:
-        timeInMinutes = oneMinute;
-        break;
-      case 50:
-        timeInMinutes = 2 * oneMinute;
-        break;
-      case 51:
-        timeInMinutes = 3 * oneMinute;
-        break;
-      case 52:
-        timeInMinutes = 4 * oneMinute;
-        break;
-      case 192:
-        timeInMinutes = timeInMinutes + halfMinute;
-        break;
+        case 49:
+          timeInMinutes = oneMinute;
+          break;
+        case 50:
+          timeInMinutes = 2 * oneMinute;
+          break;
+        case 51:
+          timeInMinutes = 3 * oneMinute;
+          break;
+        case 52:
+          timeInMinutes = 4 * oneMinute;
+          break;
+        case 192:
+          timeInMinutes = (timeInMinutes < 60 * oneMinute) ? timeInMinutes + halfMinute : timeInMinutes;
+          break;
     }
-
+    
     // Allow setting of the time if there is no existing clock
     currentTime = Date.parse(new Date());
     deadline = new Date(currentTime + timeInMinutes);
