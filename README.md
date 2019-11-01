@@ -4,7 +4,7 @@ A dashboard used to keep track of scores for participant for sparring (kumite) m
 
 **This project is licensed under the terms of the BSD 3-Clause License.**
 
-All suggestions are welcome. If any bugs are found while using this application, please feel free to drop me a comment here or email @ bernicecpz@gmail.com
+All suggestions are welcome. If any bugs are found while using this application, please feel free to drop me a comment here or email @ bernicecpz@gmail.com . Alternatively, you can contribute to this project and request for pull request :D
 
 ## Instructions
 Please refer to the "Instructions & Documentation" Folder on how to use the Kumite-Scoring-Board web application. Shortcut keys can be viewed through the '?' icon at the top right corner.
