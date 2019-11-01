@@ -4,7 +4,7 @@ A dashboard used to keep track of scores for participant for sparring (kumite) m
 
 **This project is licensed under the terms of the BSD 3-Clause License.**
 
-All suggestions are welcome. If any bugs are found while using this application, please feel free to drop me a comment here or email @ bernicecpz@gmail.com
+All suggestions are welcome. If any bugs are found while using this application, please feel free to drop me a comment here or email @ bernicecpz@gmail.com . Alternatively, you can contribute to this project and request for pull request :D
 
 ## Instructions
 Please refer to the "Instructions & Documentation" Folder on how to use the Kumite-Scoring-Board web application. Shortcut keys can be viewed through the '?' icon at the top right corner.
@@ -29,22 +29,13 @@ Please refer to the "Instructions & Documentation" Folder on how to use the Kumi
 ## Known Issues
 Currently, the known issues are related to UX/UI issues. It may take some time to update them. I will attempt to resolve these issues while working on potential features. 
 *Issues will be attempted to be resolved at best-effort basis, depending on time availability.*
-1. If 30 seconds is pressed first, not able to increment to other values.  
-Workaround: Must set the minutes before the seconds
-2. The display/entire dashboard is compatible to display resolution (1920 x 1080) and used with the "Duplicate" screen for the project settings.  
+
+1. The display/entire dashboard is compatible to display resolution (1920 x 1080) and used with the "Duplicate" screen for the project settings.  
 Workaround: May choose to zoom in/out by 10-20%
 
 ## Potential Features
 *NOTE: These features will be implemented and delivered at best-effort basis, depending on time availability.*
-1. Switching of background (AO/AKA <-> AKA/AO)
-    - To be according to the competitors' position at the start.
-    - Switching the position of the background would enable the score-keeper to manage the scores more easily, regardless of the experience of the score-keeper
-        - Feature considerations:
-          1. Will I be able to swap the entire values between the 2 colors?
-          2. Should I do that? If the user press once too many times, will there be an issue?
-          3. How do I safeguard the changes? Can I save a backup of the information display on the screen into a text file?
-    - Note to Self: Instructions in keyboard shortcuts and the table must be updated upon implementation to avoid confusion
-2. Backup of scores / Reporting
+1. Backup of scores / Reporting
     - Can allow score-keeper to backup the data by exporting into CSV file (?)
     - Save into sessionStorage / localStorage of the browser; worst case scenario: technical way of checking. 
         - May not be good for the user of the laptop, use up unnecessary resources(?). 
