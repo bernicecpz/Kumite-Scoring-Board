@@ -56,16 +56,16 @@ function setTimerButton(event) {
           timeInMinutes = 3 * oneMinute;
           break;
         case 52:
-          timeInMinutes = 4 * oneMinute;
+          timeInMinutes = 10 * oneMinute;
           break;
         case 192:
-          timeInMinutes = (timeInMinutes < 60 * oneMinute) ? timeInMinutes + halfMinute : timeInMinutes;
+          timeInMinutes = (timeInMinutes < (59 * oneMinute + 30 * oneSecond)) ? timeInMinutes + halfMinute : timeInMinutes;
           break;
     }
     
     // Allow setting of the time if there is no existing clock
     currentTime = Date.parse(new Date());
-    deadline = new Date(currentTime + timeInMinutes);
+    deadline = new Date(currentTime + timeInMinutes); //This is for the checking for time_interval
 
     // Compute minutes and seconds after setting the value of timer
     minutesTD = Math.floor((timeInMinutes % (1000 * 60 * 60)) / (1000 * 60));
@@ -74,6 +74,8 @@ function setTimerButton(event) {
     // Format the time in seconds into minutes and seconds onto the display in terms of leading zeros
     var minutesDisplay = minutesTD >= 10 ? minutesTD : "0" + minutesTD;
     var secondsDisplay = secondsTD >= 10 ? secondsTD : "0" + secondsTD;
+
+
     timeDisplay.innerHTML = minutesDisplay + ":" + secondsDisplay;
   }
 }
@@ -91,11 +93,21 @@ function run_clock() {
 	var clock = document.getElementById("timerDisplay");
 	function update_clock() {
 		var t = time_remaining(deadline);
-    if (t.seconds < 10) {
-        clock.innerHTML = "0" + t.minutes + ":0" + t.seconds;
-    } else {
-        clock.innerHTML = "0" + t.minutes + ":" + t.seconds;
+    
+    if (t.minutes < 10){
+      if(t.seconds < 10){
+        clock.innerHTML =  "0" + t.minutes + ":0" + t.seconds;
+      }else{
+        clock.innerHTML =  "0" + t.minutes + ":" + t.seconds;
+      }
+    }else{
+      if(t.seconds < 10){
+        clock.innerHTML =  t.minutes + ":0" + t.seconds;
+      }else{
+        clock.innerHTML =  t.minutes + ":" + t.seconds;
+      }
     }
+
 		if (t.total<=0) {
       clearInterval(timeinterval);
       clockRunning = false;
