@@ -6,9 +6,20 @@ A dashboard used to keep track of scores for participant for sparring (kumite) m
 
 All suggestions are welcome. If any bugs are found while using this application, please feel free to drop me a comment here or email @ bernicecpz@gmail.com . Alternatively, you can contribute to this project and request for pull request :D
 
-## Instructions
-- Open KumiteScoreDashboard.html in a web browser (preferrably Chrome) to start using the scoring board out of the box
-- Shortcut keys can be viewed through the '?' icon at the top right corner.
+## Getting Started
+
+### Quick Start
+1. Open `KumiteScoreDashboard.html` in a web browser (preferably Chrome)
+2. View keyboard shortcuts by clicking the '?' icon at the top right corner
+
+### Keyboard Shortcuts
+- **Enter**: Start/pause/resume timer
+- **ESC**: Reset all values (points, timer, fouls)
+- **Number Keys (1-4)**: Set timer to 1, 2, 3, or 10 minutes
+- **Backtick (`)**: Add 30 seconds to timer
+- **AO (Left Side)**: Q, W, E (Category 1); A, S, D (Category 2)
+- **AKA (Right Side)**: I, O, P (Category 1); J, K, L (Category 2)
+- **Swap Sides**: Click the exchange icon at the top right
 
 ## Technology used
 - HTML/CSS
